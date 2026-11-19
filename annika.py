@@ -19,3 +19,24 @@ winPct = [r[2] for r in rows]
 revenue = [r[3] for r in rows]
 nextRevenue = [r[4] for r in rows]
 notes = [r[5] for r in rows]
+
+plt.figure()
+plt.scatter(playerExpenses, winPct)
+plt.xlabel("Player Expenses ($M)")
+plt.ylabel("Wins / 1000 Games")
+plt.title("Player Expenses Relation to Win Percentage")
+plt.savefig("expenses_v_wins.png")
+
+plt.figure()
+plt.scatter(winPct, nextRevenue)
+plt.xlabel("Wins / 1000 Games")
+plt.ylabel("Revenue of Following Season ($M)")
+plt.title("Win Percentage Relation to Following Season's Revenue")
+plt.savefig("wins_v_next_rev.png")
+
+plt.figure()
+plt.scatter(playerExpenses, nextRevenue)
+plt.xlabel("Player Expenses in Season n ($M)")
+plt.ylabel("Revenue of Season n+1 ($M)")
+plt.title("Player Expenses Relation to Following Season's Revenue")
+plt.savefig("expenses_v_next_rev.png")
