@@ -1,0 +1,36 @@
+.mode csv
+.import --skip 1 seahawks.csv seahawks
+
+CREATE TABLE seahawks(
+    year                   INTEGER,
+    league                 TEXT,
+    team                   TEXT,
+    wins                   INTEGER,
+    losses                 INTEGER,
+    ties                   INTEGER,
+    div_finish             TEXT,
+    playoffs               TEXT,
+    points_for             INTEGER,
+    points_against         INTEGER,
+    point_diff             INTEGER,
+    coaches                TEXT,
+    top_av                 TEXT,
+    top_passer             TEXT,
+    top_rusher             TEXT,
+    top_receiver           TEXT,
+    off_rank_pts           INTEGER,
+    off_rank_yds           INTEGER,
+    def_rank_pts           INTEGER,
+    def_rank_yds           INTEGER,
+    rank_takeaway_giveaway INTEGER,
+    rank_pts_diff          INTEGER,
+    rank_yds_diff          INTEGER,
+    teams_in_league        INTEGER,
+    mov                    REAL,
+    sos                    REAL,
+    srs                    REAL,
+    osrs                   REAL,
+    dsrs                   REAL,
+    made_playoffs          INTEGER,
+    PRIMARY KEY (year, team)
+);
